@@ -6,6 +6,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CustomerComponent } from './components/customer/customer.component';
+import { LogInCustomerComponent } from './components/customer/log-in-customer/log-in-customer.component';
+import { SignUpCustomerComponent } from './components/customer/sign-up-customer/sign-up-customer.component';
 
 
 const routes: Routes = [
@@ -13,8 +16,11 @@ const routes: Routes = [
   {path: '*', component: NavbarComponent},
   {path: '@', component: FooterComponent},
   {path: 'admin', component: AdminComponent},
-  {path: 'adminLogIn',component: LogInAdminComponent},
-  {path: 'adminSingUp', component: SignUpAdminComponent},
+  {path: 'admin/Log-in',component: LogInAdminComponent},
+  {path: 'admin/Sign-up', component: SignUpAdminComponent},
+  {path: 'customer',component:CustomerComponent},
+  {path: 'customer/Log-In',component:LogInCustomerComponent},
+  {path: 'customer/Sign-Up',component:SignUpCustomerComponent},
 
 ];
 

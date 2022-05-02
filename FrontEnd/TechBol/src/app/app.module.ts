@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireModule } from '@angular/fire/compat';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -12,6 +13,7 @@ import { SignUpAdminComponent } from './components/admin/sign-up-admin/sign-up-a
 import { CustomerComponent } from './components/customer/customer.component';
 import { LogInCustomerComponent } from './components/customer/log-in-customer/log-in-customer.component';
 import { SignUpCustomerComponent } from './components/customer/sign-up-customer/sign-up-customer.component';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -32,6 +34,7 @@ import { SignUpCustomerComponent } from './components/customer/sign-up-customer/
     AppRoutingModule,
     FormsModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]

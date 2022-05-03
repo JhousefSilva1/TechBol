@@ -13,31 +13,23 @@ export class AuthService {
 
    }
 
-//registro de cuentas
-   async register(email: string, password: string) {
-    try {
-      return await this.afauth.createUserWithEmailAndPassword(email, password);
-    } catch (err) {
-      console.log("Error al crear usuario",err);
-      return null;
-    }
-  }
+
 
 
 
 
 
 //Iniciar Sesion con cuentas creada
-   async login(email: string, password: string) {
+   login(email: string, password: string) {
     try {
-      return await this.afauth.signInWithEmailAndPassword(email, password);
+      return  this.afauth.signInWithEmailAndPassword(email, password);
     } catch (err) {
       console.log("error en login: ", err);
       return null;
     }
   }
 
-
+/*
   //Iniciaar Sesion con Goolge
   async loginWithGoogle (email: String, password:String){
     try{
@@ -48,7 +40,7 @@ export class AuthService {
     }
 
   }
-
+*/
 
   getUserLogged(){
     return this.afauth.authState;

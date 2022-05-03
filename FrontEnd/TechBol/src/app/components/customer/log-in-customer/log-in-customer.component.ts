@@ -9,7 +9,7 @@ import { AuthService } from './../../../services/auth.service';
 })
 export class LogInCustomerComponent implements OnInit {
 
-  usuario={
+  customer={
     email:'',
     password:'',
   }
@@ -18,13 +18,14 @@ export class LogInCustomerComponent implements OnInit {
  
   }
 
-  constructor(private authService: AuthService, private router: Router){
+  constructor(  private auth: AuthService, 
+                private router: Router){
 
   }
-
+/*
   Ingresar(){
-    console.log(this.usuario);
-    const{email,password}= this.usuario;
+    console.log(this.customer);
+    const{email,password}= this.customer
     this.authService.register(email,password).then(res=>{
       console.log("Se registro",res);
     })
@@ -33,8 +34,8 @@ export class LogInCustomerComponent implements OnInit {
   }
 
   IngresarConGoogle(){
-    console.log(this.usuario);
-    const{email,password}= this.usuario;
+    console.log(this.customer);
+    const{email,password}= this.customer;
     this.authService.loginWithGoogle(email,password).then(res=>{
       console.log("Se registro",res);
     })
@@ -48,8 +49,21 @@ export class LogInCustomerComponent implements OnInit {
       })
   }
 */
+
+ async LogIn(){
+    console.log('credenciales -> ', this.customer);
+    const res = await this.auth.login(this.customer.email, this.customer.password);
+
+    if(res){
+      console.log('res ->', res);
+    }
+    
+  }
+
+
+
   LogOut(){
-    this.authService.logout();
+    this.auth.logout();
   }
 
 

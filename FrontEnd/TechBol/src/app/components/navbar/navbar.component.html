@@ -13,6 +13,8 @@
                 </a>
               </li>
             </ul>
+
+
         </div>
   
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -55,6 +57,27 @@
     </li>
   
         </ul>
+
+    </div>
+
+    <div class="navbar navbar-fixed-top navbar-custom ">
+
+      
+      <ul class="navbar-nav me-auto mb- mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" *ngIf="userLogged|async as user">
+            <img style="border-radius:100%;" src="{{user.photoURL}}" 
+            width="100" 
+            height="100" 
+            class="d-inline-block align-top" 
+            alt="">
+           
+            <br> 
+            {{user.email}}
+          </a>
+        </li>
+      </ul>
+
 
     </div>
 <!--

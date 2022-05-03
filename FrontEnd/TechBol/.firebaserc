@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "techbol"
+  },
+  "targets": {
+    "techbol": {
+      "hosting": {
+        "TechBol": [
+          "techbol"
+        ]
+      }
+    }
+  }
+}

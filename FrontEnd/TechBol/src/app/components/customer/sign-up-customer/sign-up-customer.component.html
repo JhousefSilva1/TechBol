@@ -4,14 +4,30 @@
         <div class="col-12 col-lg-9 col-xl-7">
           <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
             <div class="card-body p-4 p-md-5">
-              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Formulario de Registro de Cliente</h3>
-              <form>
-  
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Formulario de Registro de Cliente
+                      <div *ngIf="loading"
+                        class="spinner-border float-rigth"
+                        role="status">
+                        <span class="sr-only">
+                          Loading...
+                        </span>
+                      </div>
+
+              </h3>
+
+              <span *ngIf="submitted &&createCustomer.invalid" class="badge badge-danger" >TODOS LOS CAMPOS SON NECESARIOS</span>
+              <form class="mt-4"[formGroup]="createCustomer" (ngSubmit)="addCustomer()">
                 <div class="row">
                   <div class="col-md-6 mb-4">
   
                     <div class="form-outline">
-                      <input type="text" id="firstName" class="form-control form-control-lg" />
+                      <input  type="text" 
+                              id="firstName" 
+                              class="form-control form-control-lg" 
+                              placeholder="Ingrese su Nombre" 
+                              formControlName="name"
+                   
+                              />
                       <label class="form-label" for="firstName">Nombres</label>
                     </div>
   
@@ -19,7 +35,13 @@
                   <div class="col-md-6 mb-4">
   
                     <div class="form-outline">
-                      <input type="text" id="lastName" class="form-control form-control-lg" />
+                      <input  type="text" 
+                              id="lastName" 
+                              class="form-control form-control-lg" 
+                              placeholder="Ingrese sus Apellidos"
+                              formControlName="lastname"
+                
+                               />
                       <label class="form-label" for="lastName">Apellidos</label>
                     </div>
   
@@ -30,7 +52,13 @@
                   <div class="col-md-6 mb-4 d-flex align-items-center">
   
                     <div class="form-outline datepicker w-100">
-                      <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                      <input  type="date" 
+                              class="form-control form-control-lg" 
+                              id="birthdayDate" 
+                              placeholder="Ingrese su fecha de Nacimiento" 
+                              formControlName="birthday"
+                             
+                              />
                       <label for="birthdayDate" class="form-label">Fecha de Nacimiento</label>
                     </div>
   
@@ -64,7 +92,12 @@
                   <div class="col-md-6 mb-4 pb-2">
   
                     <div class="form-outline">
-                      <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                      <input 
+                      type="email" id="emailAddress"
+                      class="form-control form-control-lg" 
+                      placeholder="Ingrese su correo electrónico"
+                      formControlName="email"
+                      />
                       <label class="form-label" for="emailAddress">Correo Electronico</label>
                     </div>
   
@@ -72,7 +105,14 @@
                   <div class="col-md-6 mb-4 pb-2">
   
                     <div class="form-outline">
-                      <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                      <input  type="number" 
+                              id="phoneNumber" 
+                              class="form-control form-control-lg" 
+                              placeholder="Ingrese su número de celular"
+                              formControlName="cellphone"
+                          
+                          
+                              />
                       <label class="form-label" for="phoneNumber">Celular</label>
                     </div>
   
@@ -83,7 +123,16 @@
                     <div class="col-md-6 mb-4 pb-2">
     
                       <div class="form-outline">
-                        <input type="text" id="dni-customer" class="form-control form-control-lg" />
+                        <input  type="text" 
+                                id="dni-customer" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese su DNI" 
+                                formControlName="dni"
+                            
+                                />
+
+
+
                         <label class="form-label" for="dni">Numero de Documento de Indentidad</label>
                       </div>
     
@@ -91,7 +140,13 @@
                     <div class="col-md-6 mb-4 pb-2">
     
                       <div class="form-outline">
-                        <input type="text" id="deptop" class="form-control form-control-lg" />
+                        <input  type="text" 
+                                id="deptop" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ciudad" 
+                                formControlName="city"
+                                
+                                />
                         <label class="form-label" for="Departamento">Departamento</label>
                       </div>
     
@@ -101,7 +156,13 @@
                     <div class="col-md-6 mb-4 pb-2">
     
                       <div class="form-outline">
-                        <input type="password" id="pass" class="form-control form-control-lg" />
+                        <input  type="password" 
+                                id="pass" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese su contraseña" 
+                                formControlName="password"
+                                
+                                />
                         <label class="form-label-pass" for="pass">Contrasena</label>
                       </div>
     
@@ -109,7 +170,12 @@
                     <div class="col-md-6 mb-4 pb-2">
     
                       <div class="form-outline">
-                        <input type="password" id="rep_pass" class="form-control form-control-lg" />
+                        <input  type="password" 
+                                id="rep_pass" 
+                                class="form-control form-control-lg" 
+                                placeholder="Repita la contraseña"
+                                
+                                />
                         <label class="form-label-pass" for="pass">Repita la Contrasena</label>
                       </div>
     
@@ -117,11 +183,11 @@
                   </div>
   
                 <div class="row">
-                    <div class="col-md-3 mb-3 pb-2">
-                        <input class="btn btn-success btn-lg" type="submit" value="REGISTRAR" />
+                    <div class="col-md-5 mb-3 pb-2">
+                      <button class="btn btn-success btn-lg px-5"  >Registrar Cliente</button>
                     </div>
 
-                    <div class="col-md-3 mb-3 pb-2">
+                    <div class="col-md-5 mb-3 pb-2">
                         <input class="btn btn-danger btn-lg" type="submit" value="CANCELAR" />
                     </div>
                 </div>

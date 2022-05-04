@@ -19,8 +19,23 @@ export class AuthService {
 
 
 
-//Iniciar Sesion con cuentas creada
+//Iniciar Sesion con cuentas creada customer
    login(email: string, password: string) {
+    try {
+      return  this.afauth.signInWithEmailAndPassword(email, password);
+    } catch (err) {
+      console.log("error en login: ", err);
+      return null;
+    }
+  }
+
+
+
+
+
+  //Iniciar Sesion con cuenta Email, PWD
+
+  loginadmin(email: string, password: string) {
     try {
       return  this.afauth.signInWithEmailAndPassword(email, password);
     } catch (err) {
@@ -41,6 +56,8 @@ export class AuthService {
 
   }
 */
+
+  
 
   getUserLogged(){
     return this.afauth.authState;

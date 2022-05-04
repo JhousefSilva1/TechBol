@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
-
+//componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,6 +14,15 @@ import { SignUpAdminComponent } from './components/admin/sign-up-admin/sign-up-a
 import { CustomerComponent } from './components/customer/customer.component';
 import { LogInCustomerComponent } from './components/customer/log-in-customer/log-in-customer.component';
 import { SignUpCustomerComponent } from './components/customer/sign-up-customer/sign-up-customer.component';
+import { ManagmentCategoriesComponent } from './components/store-managment/managment-categories/managment-categories.component';
+import { ManagmentProductsComponent } from './components/store-managment/managment-products/managment-products.component';
+import { ManagmentAdminsComponent } from './components/store-managment/managment-admins/managment-admins.component';
+import { ManagmentBillsComponent } from './components/store-managment/managment-bills/managment-bills.component';
+import { ManagmentSalesComponent } from './components/store-managment/managment-sales/managment-sales.component';
+import { ManagmentStockComponent } from './components/store-managment/managment-stock/managment-stock.component';
+import { CreateProductComponent } from './components/store-managment/managment-products/create-product/create-product.component';
+
+
 import { environment } from 'src/environments/environment';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 
@@ -32,6 +41,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreManagmentComponent } from './components/store-managment/store-managment.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +56,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerComponent,
     LogInCustomerComponent,
     SignUpCustomerComponent,
+    StoreManagmentComponent,
+    ManagmentCategoriesComponent,
+    ManagmentProductsComponent,
+    ManagmentAdminsComponent,
+    ManagmentBillsComponent,
+    ManagmentSalesComponent,
+    ManagmentStockComponent,
+    CreateProductComponent,
+
+
   ],
   imports: [
     BrowserModule,

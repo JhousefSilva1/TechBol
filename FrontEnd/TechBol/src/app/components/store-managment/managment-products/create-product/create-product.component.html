@@ -1,0 +1,209 @@
+<section class="vh-150 gradient-custom">
+    <div class="container py-5 h-10">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registro de Productos
+                      <div *ngIf="loading"
+                        class="spinner-border float-rigth"
+                        role="status">
+                        <span class="sr-only">
+                          Loading...
+                        </span>
+                      </div>
+
+              </h3>
+
+              <span *ngIf="submitted &&createProduct.invalid" class="badge badge-danger" >TODOS LOS CAMPOS SON NECESARIOS</span>
+              <form class="mt-4"[formGroup]="createProduct" (ngSubmit)="addProduct()">
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input  type="text" 
+                              id="productName" 
+                              class="form-control form-control-lg" 
+                              placeholder="Ingrese el producto" 
+                              formControlName="productName"
+                   
+                              />
+                      <label class="form-label" for="productName">Producto</label>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input  type="text" 
+                              id="productModel" 
+                              class="form-control form-control-lg" 
+                              placeholder="Ingrese el modelo"
+                              formControlName="productModel"
+                
+                               />
+                      <label class="form-label" for="productModel">Modelo</label>
+                    </div>
+  
+                  </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input  type="text" 
+                                id="productBranch" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese la maraca del producto " 
+                                formControlName="productBranch"
+                     
+                                />
+                        <label class="form-label" for="productBranch">Marca</label>
+                      </div>
+    
+                    </div>
+
+
+
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input  type="text" 
+                                id="productSerial" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese el Numero serial "
+                                formControlName="productSerial"
+                  
+                                 />
+                        <label class="form-label" for="productSerial">No. Serial</label>
+                      </div>
+    
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input  type="text" 
+                                id="productColor" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese el Color" 
+                                formControlName="productColor"
+                     
+                                />
+                        <label class="form-label" for="productColor">Color</label>
+                      </div>
+    
+                    </div>
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input  type="text" 
+                                id="productCategory" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese una categoria"
+                                formControlName="productCategory"
+                  
+                                 />
+                        <label class="form-label" for="productCategory">Categoria</label>
+                      </div>
+    
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input  type="number" 
+                                id="productPriceFromBuy" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese el Precio de Compra" 
+                                formControlName="productPriceFromBuy"
+                     
+                                />
+                        <label class="form-label" for="productPricefromBuy">Precio de Compra</label>
+                      </div>
+    
+                    </div>
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input  type="number" 
+                                id="productPriceToSell" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese el Precio de venta"
+                                formControlName="productPriceToSell"
+                  
+                                 />
+                        <label class="form-label" for="productPriceToSell">Precio de venta</label>
+                      </div>
+    
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input  type="number" 
+                                id="productStock" 
+                                class="form-control form-control-lg" 
+                                placeholder="Ingrese el Stock" 
+                                formControlName="productStock"
+                     
+                                />
+                        <label class="form-label" for="productStock">Stock</label>
+                      </div>
+    
+                    </div>
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input  type="text" 
+                                id="productImage" 
+                                class="form-control form-control-lg" 
+                                placeholder="Subir una imagen"
+                                formControlName="productImage"
+                  
+                                 />
+                        <label class="form-label" for="productImage">Imagen</label>
+                      </div>
+    
+                    </div>
+                  </div>
+  
+
+  
+
+  
+                <div class="row">
+                    <div class="col-md-5 mb-3 pb-2">
+                      <button class="btn btn-success btn-lg px-5"  >Registrar Producto</button>
+                    </div>
+
+                    <div class="col-md-5 mb-3 pb-2">
+                        <input class="btn btn-danger btn-lg" type="submit" value="CANCELAR" />
+                    </div>
+                </div>
+
+
+                
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

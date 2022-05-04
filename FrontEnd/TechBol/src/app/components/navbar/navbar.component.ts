@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  
   userLogged=this.authService.getUserLogged();
 
   constructor(private authService: AuthService) { }

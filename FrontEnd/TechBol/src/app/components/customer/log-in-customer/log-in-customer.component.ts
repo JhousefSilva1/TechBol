@@ -49,7 +49,7 @@ export class LogInCustomerComponent implements OnInit {
       })
   }
 */
-
+// CustomerLogIn
  async LogIn(){
     console.log('credenciales -> ', this.customer);
     const res = await this.auth.login(this.customer.email, this.customer.password);
@@ -59,6 +59,13 @@ export class LogInCustomerComponent implements OnInit {
     }
     
   }
+
+
+
+
+
+
+
 
 
 

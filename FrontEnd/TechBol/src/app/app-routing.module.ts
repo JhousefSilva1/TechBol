@@ -9,6 +9,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { LogInCustomerComponent } from './components/customer/log-in-customer/log-in-customer.component';
 import { SignUpCustomerComponent } from './components/customer/sign-up-customer/sign-up-customer.component';
+import { StoreManagmentComponent } from './components/store-managment/store-managment.component';
+import { ManagmentCategoriesComponent } from './components/store-managment/managment-categories/managment-categories.component';
+import { ManagmentProductsComponent } from './components/store-managment/managment-products/managment-products.component';
+import { ManagmentAdminsComponent } from './components/store-managment/managment-admins/managment-admins.component';
+import { ManagmentSalesComponent } from './components/store-managment/managment-sales/managment-sales.component';
+import { ManagmentStockComponent } from './components/store-managment/managment-stock/managment-stock.component';
+import { CreateProductComponent } from './components/store-managment/managment-products/create-product/create-product.component';
 
 
 const routes: Routes = [
@@ -21,11 +28,18 @@ const routes: Routes = [
   {path: 'customer',component:CustomerComponent},
   {path: 'customer/Log-In',component:LogInCustomerComponent},
   {path: 'customer/Sign-Up',component:SignUpCustomerComponent},
-
+  {path: 'admin/Store-Managment', component: StoreManagmentComponent},
+  {path: 'admin/managment-categories',component: ManagmentCategoriesComponent},
+  {path: 'admin/managment-products', component: ManagmentProductsComponent},
+  {path: 'admin/managment-admins',component: ManagmentAdminsComponent},
+  {path: 'admin/managment-bills',component: ManagmentAdminsComponent},
+  {path: 'admin/managment-sales', component: ManagmentSalesComponent},
+  {path: 'admin/managment-stock', component: ManagmentStockComponent},
+  {path: 'admin/managment-products/create-product',component: CreateProductComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }

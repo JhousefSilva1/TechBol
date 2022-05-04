@@ -880,6 +880,7 @@
                0 0 50px #ff00de,
                0 0 75px #ff00de;
   }
+
   }
   
   
@@ -898,9 +899,7 @@
   perspective: 1000px;
   }
   
-  .card__father:hover .card{
-  transform: rotateY(180deg);
-  }
+
   
   
   .card{
@@ -917,8 +916,7 @@
   }
   
   
-  .card__front,
-  .card__back{
+  .card__front{
   width: 100%;
   height: 100%;
   position: absolute;
@@ -956,40 +954,3 @@
   border-radius: 20px;
   }
   
-  .body__card_back{
-  padding: 40px;
-  text-align: center;
-  transform: translateZ(60px);
-  }
-  
-  .body__card_back p{
-  margin-top: 30px;
-  font-size: 18px;
-  }
-  
-  .body__card_back input{
-  padding: 10px 40px;
-  margin-top: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  color: white;
-  background: #58B0F6;
-  box-shadow: 1px 1px 30px -5px #58B0F6;
-  border-radius: 10px;
-  transition: box-shadow 600ms;
-  }
-  
-  .body__card_back input:hover{
-  box-shadow: 1px 1px 30px 0px #449de6;
-  }
-  /*#############################*/
-  .title-tendencias{
-    color: darkblue;
-  }
-  .title-Marcas{
-    color:#3b5998;
-  }
-  .title-Garantia{
-    color:#762A83;
-  }

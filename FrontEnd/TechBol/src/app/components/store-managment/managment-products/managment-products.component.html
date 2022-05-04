@@ -1,0 +1,62 @@
+<div class="container-sm">
+    <div class="position top-50 start-50">
+      <h1>
+        <input type="button" class="btn btn-success" onclick="location.href='admin/managment-products/create-product';" value="Agregar Nuevo Producto" />
+    </h1>
+    </div>
+    <div class="card" style="width: 75rem;">
+      <div class="card-body">
+  
+        <div class="position-absolute start-50 translate-middle">
+          <h1 class="card-title"><b>Lista de Productos</b></h1>
+        </div>
+  
+        <table class="table table-sm">
+     
+          <thead>
+            <tr>
+          <th scope="col"></th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Color</th>
+          <th scope="col">Costo</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Categoria</th>
+          <th scope="col">Accion</th>
+      
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product">
+          <th scope="row">{{product.product_id}}</th>
+          <td>
+  
+            <img width="50" [src]="product.image" alt="">
+          </td>
+          <td>{{product.product_name}}</td>
+          <td>{{product.details}}</td>
+          <td>{{product.size}}</td>
+          <td>{{product.color}}</td>
+          <td>{{product.costProduct}}</td>
+          <td>{{product.stock}}</td>
+          <td>{{product.categoria_categoria_id}}</td>
+          <td>
+            <div>
+             <button class="btn btn-success" style="margin: 10px" type="btnEdit" >Editar</button>
+             <button  name="btnDelete" style="margin: 10px"  class="btn btn-danger"
+             mwlConfirmationPopover
+
+             placement= "left"
+             
+             >Eliminar</button>
+  
+            </div>
+            
+            </td>
+        </tr>  
+      </tbody>
+    </table>
+  </div>

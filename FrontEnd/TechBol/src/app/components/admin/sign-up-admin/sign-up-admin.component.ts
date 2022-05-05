@@ -53,6 +53,14 @@ export class SignUpAdminComponent implements OnInit {
 
     const admin:any={
       name:this.createAdmin.value.name,
+      lastname:this.createAdmin.value.lastname,
+      birthday:this.createAdmin.value.birthday,
+      startDate:this.createAdmin.value.startDate,
+      email:this.createAdmin.value.email,
+      cellPhone:this.createAdmin.value.cellPhone,
+      dni:this.createAdmin.value.dni,
+      city:this.createAdmin.value.city,
+      password:this.createAdmin.value.password,
     }
 
 

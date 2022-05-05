@@ -4,7 +4,7 @@
         <input type="button" class="btn btn-success" onclick="location.href='admin/managment-products/create-product';" value="Agregar Nuevo Producto" />
     </h1>
     </div>
-    <div class="card" style="width: 75rem;">
+    <div class="card" style="width: 85rem;">
       <div class="card-body">
   
         <div class="position-absolute start-50 translate-middle">
@@ -16,14 +16,17 @@
           <thead>
             <tr>
           <th scope="col">Item</th>
-          <th scope="col">Imagen</th>
           <th scope="col">Producto</th>
           <th scope="col">Modelo</th>
           <th scope="col">Marca</th>
+          <th scope="col">Serial</th>
           <th scope="col">Color</th>
-          <th scope="col">Costo</th>
-          <th scope="col">Stock</th>
           <th scope="col">Categoria</th>
+          <th scope="col">Precio de Compra</th>
+          <th scope="col">Precio de Venta</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Image</th>
+          
           <th scope="col">Accion</th>
       
           
@@ -31,7 +34,8 @@
       </thead>
       <tbody>
         <tr *ngFor="let product of products">
-          <td>{{product.productImage}}</td>
+          <td>{{product.productID}}</td>
+          
           <td>{{product.productName}}</td>
           <td>{{product.productModel}}</td>
           <td>{{product.productBranch}}</td>
@@ -41,6 +45,7 @@
           <td>{{product.productPriceFromBuy}}</td>
           <td>{{product.productPriceToSell}}</td>
           <td>{{product.productStock}}</td>
+          <td>{{product.productImage}}</td>
           
           
 

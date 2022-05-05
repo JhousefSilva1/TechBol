@@ -54,7 +54,7 @@ export class CreateProductComponent implements OnInit {
           productModel: this.createProduct.value.productModel,
           productBranch:this.createProduct.value.productBranch,
           productSerial:this.createProduct.value.productSerial,
-          productColors:this.createProduct.value.productColor,
+          productColor:this.createProduct.value.productColor,
           ProductCategory:this.createProduct.value.productCategory,
           productPriceFromBuy:this.createProduct.value.productPriceFromBuy,
           productPriceToSell:this.createProduct.value.productPriceToSell,

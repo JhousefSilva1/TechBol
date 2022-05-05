@@ -30,19 +30,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product">
+        <tr *ngFor="let product of products">
           <th scope="row">{{product.product_id}}</th>
           <td>
   
             <img width="50" [src]="product.image" alt="">
           </td>
-          <td>{{product.product_name}}</td>
-          <td>{{product.details}}</td>
-          <td>{{product.size}}</td>
-          <td>{{product.color}}</td>
-          <td>{{product.costProduct}}</td>
-          <td>{{product.stock}}</td>
-          <td>{{product.categoria_categoria_id}}</td>
+          <td>{{product.productName}}</td>
+          <td>{{product.productName}}</td>
+
           <td>
             <div>
              <button class="btn btn-success" style="margin: 10px" type="btnEdit" >Editar</button>

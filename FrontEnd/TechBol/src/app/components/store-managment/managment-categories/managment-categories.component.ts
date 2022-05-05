@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-managment-categories',
   templateUrl: './managment-categories.component.html',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagmentCategoriesComponent implements OnInit {
 
-  constructor() { }
+  
+
+
+ 
 
   ngOnInit(): void {
   }
+
+
+
+  constructor(
+    ) { 
+
+      
+    }
+
+     
 
 }

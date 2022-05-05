@@ -1,11 +1,9 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
-import { DatabaseService } from './../../../services/database.service';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CustomerService } from 'src/app/services/customer.service';
 import { Router } from '@angular/router';
 import { ToastrService} from 'ngx-toastr';
+
 @Component({
   selector: 'app-sign-up-customer',
   templateUrl: './sign-up-customer.component.html',

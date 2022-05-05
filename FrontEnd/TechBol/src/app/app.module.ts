@@ -42,6 +42,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreManagmentComponent } from './components/store-managment/store-managment.component';
+import { CreateCategoryComponent } from './components/store-managment/managment-categories/create-category/create-category.component';
+
 
 
 @NgModule({
@@ -64,6 +66,8 @@ import { StoreManagmentComponent } from './components/store-managment/store-mana
     ManagmentSalesComponent,
     ManagmentStockComponent,
     CreateProductComponent,
+    CreateCategoryComponent,
+
 
 
   ],

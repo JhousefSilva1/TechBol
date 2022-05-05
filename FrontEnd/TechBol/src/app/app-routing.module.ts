@@ -16,6 +16,7 @@ import { ManagmentAdminsComponent } from './components/store-managment/managment
 import { ManagmentSalesComponent } from './components/store-managment/managment-sales/managment-sales.component';
 import { ManagmentStockComponent } from './components/store-managment/managment-stock/managment-stock.component';
 import { CreateProductComponent } from './components/store-managment/managment-products/create-product/create-product.component';
+import { CreateCategoryComponent } from './components/store-managment/managment-categories/create-category/create-category.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
   {path: 'admin/managment-bills',component: ManagmentAdminsComponent},
   {path: 'admin/managment-sales', component: ManagmentSalesComponent},
   {path: 'admin/managment-stock', component: ManagmentStockComponent},
-  {path: 'admin/managment-products/create-product',component: CreateProductComponent}
+  {path: 'admin/managment-products/create-product',component: CreateProductComponent},
+  {path: 'admin/managment-categories/create-category', component: CreateCategoryComponent}
 ];
 
 @NgModule({

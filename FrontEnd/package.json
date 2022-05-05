@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "popper": "^1.0.1"
+    "popper": "^1.0.1",
+    "route": "^0.2.5"
   }
 }

@@ -1,0 +1,76 @@
+<section class="vh-150 gradient-custom">
+    <div class="container py-5 h-10">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registro de Categorias
+                      <div *ngIf="loading"
+                        class="spinner-border float-rigth"
+                        role="status">
+                        <span class="sr-only">
+                          Loading...
+                        </span>
+                      </div>
+
+              </h3>
+
+              <span *ngIf="submitted &&createCategory.invalid" class="badge badge-danger" >TODOS LOS CAMPOS SON NECESARIOS</span>
+              <form class="mt-4"[formGroup]="createCategory" (ngSubmit)="addCategory()">
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input  type="text" 
+                              id="categoryName" 
+                              class="form-control form-control-lg" 
+                              placeholder="Ingrese la Categoria" 
+                              formControlName="categoryName"
+                   
+                              />
+                      <label class="form-label" for="productName">Categoria</label>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input  type="text" 
+                              id="CategoryDetail" 
+                              class="form-control form-control-lg" 
+                              placeholder="Ingrese un breve detalle"
+                              formControlName="categoryDetail"
+                
+                               />
+                      <label class="form-label" for="productModel">Detalle</label>
+                    </div>
+  
+                  </div>
+                </div>
+
+
+
+
+
+  
+                <div class="row">
+                    <div class="col-md-5 mb-3 pb-2">
+                      <button class="btn btn-success btn-lg px-5"  >Registrar Categoria</button>
+                    </div>
+
+                    <div class="col-md-5 mb-3 pb-2">
+                        <input class="btn btn-danger btn-lg" type="submit" value="Cancelar Registro" />
+                    </div>
+                </div>
+
+
+                
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

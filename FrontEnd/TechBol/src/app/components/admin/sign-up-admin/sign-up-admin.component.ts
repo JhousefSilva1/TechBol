@@ -28,6 +28,16 @@ export class SignUpAdminComponent implements OnInit {
 
       this.createAdmin = this.fb.group({
         name:['',Validators.required],
+        lastname:['',Validators.required],
+        birthday:['', Validators.required],
+        startDate:['',Validators.required],
+        email:['', Validators.required],
+        cellPhone:['',Validators.required],
+        dni:['',Validators.required],
+        city:['', Validators.required],
+        password:['',Validators.required],
+
+
         
       })
   }

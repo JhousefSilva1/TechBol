@@ -25,7 +25,8 @@ const routes: Routes = [
   {path: '@', component: FooterComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'admin/Log-in',component: LogInAdminComponent},
-  {path: 'admin/Sign-up', component: SignUpAdminComponent},
+  {path: 'admin/Sign-up', component: SignUpAdminComponent},//crear admin
+  {path: 'admin/Sign-up-edit/:id', component: SignUpAdminComponent},//editar admin
   {path: 'customer',component:CustomerComponent},
   {path: 'customer/Log-In',component:LogInCustomerComponent},
   {path: 'customer/Sign-Up',component:SignUpCustomerComponent},

@@ -20,5 +20,16 @@ export class AdminService {
      return this.firestore.collection('admins').snapshotChanges();
    }
 
+   deleteAdmin(id:string):Promise<any>{
+     return this.firestore.collection('admins').doc(id).delete();
+   }
+   editAdmin(id:string):Observable<any>{
+     return this.firestore.collection('admins').doc(id).snapshotChanges();
+   }
+
+   updateAdmin(id:string, data:any):Promise<any>{
+      return this.firestore.collection('admins').doc(id).update(data);
+   }
+
 
 }

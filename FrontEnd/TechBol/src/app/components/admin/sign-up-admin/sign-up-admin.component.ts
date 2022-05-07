@@ -36,6 +36,7 @@ export class SignUpAdminComponent implements OnInit {
         dni:['',Validators.required],
         city:['', Validators.required],
         password:['',Validators.required],
+        
 
 
         

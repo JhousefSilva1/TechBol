@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { elementAt } from 'rxjs';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -11,16 +12,25 @@ import { ProductService } from 'src/app/services/product.service';
 export class ManagmentProductsComponent implements OnInit {
 
   products: any[]=[];
+  submitted=false;
+  loading=false;
+  id: string | null;
+  titutlo = 'AGREGAR PRODUCTOS';
 
   constructor(private _productService: ProductService,
-              private router: Router, ) { 
-
-
+              private toastr: ToastrService,
+              private router: Router,
+              private aRoute: ActivatedRoute,
+               ) { 
+              
+this.id = this.aRoute.snapshot.paramMap.get('id');
+console.log(this.id)
               }
 
 
   ngOnInit(): void {
     this.getProducts();
+    this.editProducts();
   }
 
   getProducts(){
@@ -41,6 +51,26 @@ export class ManagmentProductsComponent implements OnInit {
         console.log(this.products);
     })
 
+  }
+
+  deleteProducts(id:string){
+    this._productService.deleteProduct(id).then(()=>{
+      console.log('Produto eliminado con éxito');
+      this.toastr.info('El producto ha sido eliminado con éxito','Producto elimimnado',
+      {positionClass: 'toast-bottom-right'});
+
+    }).catch(error =>{
+        console.log(error);
+    });
+  }
+
+  editProducts(){
+    this.titutlo='EDITAR PRODUCTOS'
+    if(this.id !==null){
+        this._productService.editProduct(this.id).subscribe(data=>{
+            console.log(data)
+        })
+    }
   }
 
 }

@@ -43,6 +43,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreManagmentComponent } from './components/store-managment/store-managment.component';
 import { CreateCategoryComponent } from './components/store-managment/managment-categories/create-category/create-category.component';
+import { CatalogueComponent } from './components/catalogue/catalogue.component';
 
 
 
@@ -67,6 +68,7 @@ import { CreateCategoryComponent } from './components/store-managment/managment-
     ManagmentStockComponent,
     CreateProductComponent,
     CreateCategoryComponent,
+    CatalogueComponent,
 
 
 
@@ -95,6 +97,8 @@ import { CreateCategoryComponent } from './components/store-managment/managment-
     providePerformance(() => getPerformance()),
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
+  ],exports:[
+      CatalogueComponent,
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

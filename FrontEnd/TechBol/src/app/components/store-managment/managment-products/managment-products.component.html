@@ -10,8 +10,8 @@
         <div class="position-absolute start-50 translate-middle">
           <h1 class="card-title"><b>Lista de Productos</b></h1>
         </div>
-  
-        <table class="table table-sm">
+          <h5 *ngIf="products.length == 0">NO HAY DATOS PARA MOSTRAR</h5>
+        <table *ngIf="products.length > 0" class="table table-striped mt-5">
      
           <thead>
             <tr>
@@ -22,8 +22,8 @@
           <th scope="col">Serial</th>
           <th scope="col">Color</th>
           <th scope="col">Categoria</th>
-          <th scope="col">Precio de Compra</th>
-          <th scope="col">Precio de Venta</th>
+          <th scope="col">Precio de Compra  </th>
+          <th scope="col">Precio de Venta </th>
           <th scope="col">Stock</th>
           <th scope="col">Image</th>
           
@@ -42,8 +42,8 @@
           <td>{{product.productSerial}}</td>
           <td>{{product.productColor}}</td>
           <td>{{product.productCategory}}</td>
-          <td>{{product.productPriceFromBuy}}</td>
-          <td>{{product.productPriceToSell}}</td>
+          <td>{{product.productPriceFromBuy | currency}}</td>
+          <td>{{product.productPriceToSell | currency}}</td>
           <td>{{product.productStock}}</td>
           <td>{{product.productImage}}</td>
           
@@ -51,9 +51,9 @@
 
           <td>
             <div>
-             <button class="btn btn-success" style="margin: 10px" type="btnEdit" >Editar</button>
-             <button  name="btnDelete" style="margin: 10px"  class="btn btn-danger"
-             mwlConfirmationPopover
+             <button [routerLink]="['/admin/managment-products/edit-product/',product.id]" class="btn btn-success" style="margin: 10px" type="btnEdit" >Editar</button>
+             <button (click)="deleteProducts(product.id)" name="btnDelete" style="margin: 10px"  class="btn btn-danger"
+              mwlConfirmationPopover
 
              placement= "left"
              

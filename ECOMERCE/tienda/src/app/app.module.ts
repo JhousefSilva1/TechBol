@@ -17,6 +17,8 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { InicioComponent } from './components/inicio/inicio.component';
     AppComponent,
     NavComponent,
     FooterComponent,
-    InicioComponent
+    InicioComponent,
+    NotfoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

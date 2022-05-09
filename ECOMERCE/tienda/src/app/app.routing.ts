@@ -2,7 +2,13 @@ import { Routes, RouterModule } from "@angular/router";
 import { ModuleWithProviders } from "@angular/core";
 import { AuthGuard } from "../app/guards/auth.guard";
 
+
+import { InicioComponent } from "./components/inicio/inicio.component";
+import { LoginComponent } from "./components/login/login.component";
+
 const appRoute : Routes = [
+    {path: '', component: InicioComponent},
+    {path: 'login', component: LoginComponent},
 
 ]
    

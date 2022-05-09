@@ -10,9 +10,9 @@ exports.createToken = function(user){
         nombres: user.nombres,
         apellidos: user.apellidos,
         email: user.email,
-        iat: moment().unix(),
-        exp: moment().add(1,'day').unix()
+        iat: moment().unix(),//inicio de token
+        exp: moment().add(1,'day').unix()//tiempo de expiracion del token
     }
 
-    return jwt.encode(payload,secret);
+    return jwt.encode(payload,secret);//se ecripta con la contraseña
 }

@@ -497,7 +497,7 @@ const enviar_email_pedido_compra = async function(venta){
             service: 'gmail',
             host: 'smtp.gmail.com',
             auth: {
-                user: 'diegoalonssoac@gmail.com',
+                user: 'jhosede23@gmail.com',
                 pass: 'dcmplvjviofjojgf'
             }
         }));
@@ -515,7 +515,7 @@ const enviar_email_pedido_compra = async function(venta){
             var htmlToSend = template({op:true});
     
             var mailOptions = {
-                from: 'diegoalonssoac@gmail.com',
+                from: 'jhosede23@gmail.com',
                 to: orden.cliente.email,
                 subject: 'Gracias por tu orden, Prágol.',
                 html: htmlToSend
@@ -672,7 +672,7 @@ const mail_confirmar_envio = async function(venta){
             service: 'gmail',
             host: 'smtp.gmail.com',
             auth: {
-                user: 'diegoalonssoac@gmail.com',
+                user: 'jhosede23@gmail.com',
                 pass: 'dcmplvjviofjojgf'
             }
         }));
@@ -690,7 +690,7 @@ const mail_confirmar_envio = async function(venta){
             var htmlToSend = template({op:true});
     
             var mailOptions = {
-                from: 'diegoalonssoac@gmail.com',
+                from: 'jhosede23@gmail.com',
                 to: orden.cliente.email,
                 subject: 'Tu pedido ' + orden._id + ' fué enviado',
                 html: htmlToSend
@@ -768,7 +768,7 @@ const enviar_orden_compra = async function(venta){
             service: 'gmail',
             host: 'smtp.gmail.com',
             auth: {
-                user: 'diegoalonssoac@gmail.com',
+                user: 'jhosede23@gmail.com',
                 pass: 'dcmplvjviofjojgf'
             }
         }));
@@ -786,7 +786,7 @@ const enviar_orden_compra = async function(venta){
             var htmlToSend = template({op:true});
     
             var mailOptions = {
-                from: 'diegoalonssoac@gmail.com',
+                from: 'jhosede23ägmail.com',
                 to: orden.cliente.email,
                 subject: 'Confirmación de compra ' + orden._id,
                 html: htmlToSend
@@ -837,5 +837,5 @@ module.exports = {
     marcar_envio_orden,
     confirmar_pago_orden,
     registro_compra_manual_cliente,
-    listar_variedades_productos_admin
+    listar_variedades_productos_admin,
 }

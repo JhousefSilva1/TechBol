@@ -18,8 +18,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { CuentaComponent } from './components/perfil/cuenta/cuenta.component';
 import { DireccionesComponent } from './components/perfil/direcciones/direcciones.component';
+import { IndexProductoComponent } from './components/productos/index-producto/index-producto.component';
+import { EditProductoComponent } from './components/productos/edit-producto/edit-producto.component';
+import { ShowProductoComponent } from './components/productos/show-producto/show-producto.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { PedidosComponent } from './components/perfil/pedidos/pedidos.component';
 import { DpedidosComponent } from './components/perfil/dpedidos/dpedidos.component';
 import { RatingModule } from 'ng-starrating';
+import { VerifyPagoComponent } from './components/verify-pago/verify-pago.component';
+import { ReviewsComponent } from './components/perfil/reviews/reviews.component';
 import { EmbajadorasComponent } from './components/static/embajadoras/embajadoras.component';
 import { ImpactoComponent } from './components/static/impacto/impacto.component';
 import { NosotrosComponent } from './components/static/nosotros/nosotros.component';
@@ -27,9 +35,7 @@ import { PoliticasEnvioComponent } from './components/static/politicas-envio/pol
 import { TerminosCondicionesComponent } from './components/static/terminos-condiciones/terminos-condiciones.component';
 import { ContactoComponent } from './components/static/contacto/contacto.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { IndexProductoComponent } from './components/productos/index-producto/index-producto.component';
-import { ShowProductoComponent } from './components/productos/show-producto/show-producto.component';
-import { EditProductoComponent } from './components/productos/edit-producto/edit-producto.component';
+
 
 
 @NgModule({
@@ -41,7 +47,15 @@ import { EditProductoComponent } from './components/productos/edit-producto/edit
     LoginComponent,
     CuentaComponent,
     DireccionesComponent,
+    IndexProductoComponent,
+    EditProductoComponent,
+    ShowProductoComponent,
+    CarritoComponent,
+    CheckoutComponent,
+    PedidosComponent,
     DpedidosComponent,
+    VerifyPagoComponent,
+    ReviewsComponent,
     EmbajadorasComponent,
     ImpactoComponent,
     NosotrosComponent,
@@ -49,10 +63,8 @@ import { EditProductoComponent } from './components/productos/edit-producto/edit
     TerminosCondicionesComponent,
     ContactoComponent,
     NotfoundComponent,
-   
-    IndexProductoComponent,
-    ShowProductoComponent,
-    EditProductoComponent
+    CarritoComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

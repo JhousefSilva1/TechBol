@@ -1,47 +1,47 @@
 [
     {
-        "titulo":"Polos",
-        "slug":"polos",
+        "titulo":"Moviles",
+        "slug":"Moviles",
         "_id": "1000"
     },
     {
-        "titulo":"Poleras",
-        "slug":"poleras",
+        "titulo":"Laptops",
+        "slug":"Laptops",
         "_id": "1001"
     },
     {
-        "titulo":"Joggers",
-        "slug":"joggers",
+        "titulo":"Música",
+        "slug":"Músic",
         "_id": "1004"
     },
     {
-        "titulo":"Shorts",
-        "slug":"shorts",
+        "titulo":"Video",
+        "slug":"Video",
         "_id": "1005"
     },
     {
-        "titulo":"Camisas",
-        "slug":"camisas",
+        "titulo":"Gadgets",
+        "slug":"Gadgets",
         "_id": "1002"
     },
     {
-        "titulo":"Casacas",
-        "slug":"casacas",
+        "titulo":"Cine",
+        "slug":"Cine",
         "_id": "1006"
     },
     {
-        "titulo":"Tops",
-        "slug":"tops",
+        "titulo":"Casa",
+        "slug":"Casa",
         "_id": "1007"
     },
     {
-        "titulo":"Accesorios",
-        "slug":"camisas",
+        "titulo":"Vehiculos",
+        "slug":"Vehiculos",
         "_id": "1003"
     },
     {
-        "titulo":"Packs",
-        "slug":"packs",
+        "titulo":"Empresa",
+        "slug":"Empresa",
         "_id": "1008"
     }
     

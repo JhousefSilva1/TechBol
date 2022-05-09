@@ -2,48 +2,49 @@
 [
   {
     "id": "01",
-    "name": "Amazonas"
+    "name": "Pando"
   },
   {
     "id": "02",
-    "name": "Áncash"
+    "name": "La Paz"
   },
   {
     "id": "03",
-    "name": "Apurímac"
+    "name": "Cochabamba"
   },
   {
     "id": "04",
-    "name": "Arequipa"
+    "name": "Santa Cruz"
   },
   {
     "id": "05",
-    "name": "Ayacucho"
+    "name": "Beni"
   },
   {
     "id": "06",
-    "name": "Cajamarca"
+    "name": "Potosi"
   },
   {
     "id": "07",
-    "name": "Callao"
+    "name": "Oruro"
   },
   {
     "id": "08",
-    "name": "Cusco"
+    "name": "Chuquisaca"
   },
   {
     "id": "09",
-    "name": "Huancavelica"
+    "name": "Tarija"
   },
   {
     "id": "10",
-    "name": "Huánuco"
+    "name": "El Alto"
   },
   {
     "id": "11",
-    "name": "Ica"
+    "name": "Quillacollo"
   },
+  
   {
     "id": "12",
     "name": "Junín"

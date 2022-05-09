@@ -37,9 +37,10 @@ const routes: Routes = [
   {path: 'admin/managment-bills',component: ManagmentAdminsComponent},
   {path: 'admin/managment-sales', component: ManagmentSalesComponent},
   {path: 'admin/managment-stock', component: ManagmentStockComponent},
-  {path: 'admin/managment-products/create-product',component: CreateProductComponent},
-  {path: 'admin/managment-products/edit-product/:id',component: CreateProductComponent},
-  {path: 'admin/managment-categories/create-category', component: CreateCategoryComponent},
+  {path: 'admin/managment-products/create-product',component: CreateProductComponent},//create product
+  {path: 'admin/managment-products/edit-product/:id',component: CreateProductComponent},//edit category
+  {path: 'admin/managment-categories/create-category', component: CreateCategoryComponent},//crear category
+  {path: 'admin/managment-categories/edit-category/:id', component: CreateCategoryComponent}, //edit category
   {path: 'customer/Catalogue',component: CatalogueComponent},
 ];
 

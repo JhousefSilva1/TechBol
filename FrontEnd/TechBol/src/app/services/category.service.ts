@@ -17,4 +17,18 @@ export class CategoryService {
   getCategory():Observable<any>{
     return this.firestore.collection('categories', ref => ref.orderBy('DateCreate','asc')).snapshotChanges();
   }
+  getShowCategory():Observable<any>{
+    return this.firestore.collection('categories').snapshotChanges();
+  }
+  deleteCategory(id:string):Promise<any>{
+    return this.firestore.collection('categories').doc(id).delete();
+  }
+  editCategory(id:string):Observable<any>{
+    return this.firestore.collection('categories').doc(id).snapshotChanges(); 
+  
+  }
+
+  updateCategory(id:string, data:any):Promise<any>{
+    return this.firestore.collection('categories').doc(id).update(data);
+  }
 }

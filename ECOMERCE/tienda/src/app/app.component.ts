@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { GuestService } from './services/guest.service';
-
+import { StarRatingComponent } from 'ng-starrating';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -48,5 +48,13 @@ export class AppComponent {
   onActivate(event:any) {
     window.scroll(0,0);
 
+  }
+
+
+  onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
+    alert(`Old Value:${$event.oldValue}, 
+      New Value: ${$event.newValue}, 
+      Checked Color: ${$event.starRating.checkedcolor}, 
+      Unchecked Color: ${$event.starRating.uncheckedcolor}`);
   }
 }

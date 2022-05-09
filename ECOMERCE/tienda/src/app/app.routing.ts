@@ -7,6 +7,11 @@ import { InicioComponent } from "./components/inicio/inicio.component";
 import { LoginComponent } from "./components/login/login.component";
 
 
+import { DpedidosComponent } from "./components/perfil/dpedidos/dpedidos.component";
+import { PedidosComponent } from "./components/perfil/pedidos/pedidos.component";
+import { ReviewsComponent } from "./components/perfil/reviews/reviews.component";
+
+
 
 
 
@@ -17,12 +22,24 @@ import { PoliticasEnvioComponent } from "./components/static/politicas-envio/pol
 import { TerminosCondicionesComponent } from "./components/static/terminos-condiciones/terminos-condiciones.component";
 import { ContactoComponent } from "./components/static/contacto/contacto.component";
 import { NotfoundComponent } from "./components/notfound/notfound.component";
+import { CuentaComponent } from "./components/perfil/cuenta/cuenta.component";
+import { DireccionesComponent } from "./components/perfil/direcciones/direcciones.component";
+
 //import { AuthGuard } from "../app/guards/auth.guard";
 
 
 const appRoute : Routes = [
     {path: '', component: InicioComponent},
     {path: 'login', component: LoginComponent},
+
+    {path: 'cuenta/perfil', component: CuentaComponent, canActivate:[AuthGuard]},
+    {path: 'cuenta/direcciones', component: DireccionesComponent, canActivate:[AuthGuard]},
+    {path: 'cuenta/pedidos', component: PedidosComponent, canActivate:[AuthGuard]},
+    {path: 'cuenta/pedidos/:id', component: DpedidosComponent, canActivate:[AuthGuard]},
+    {path: 'cuenta/reviews', component: ReviewsComponent, canActivate:[AuthGuard]},
+
+
+
 
 
 

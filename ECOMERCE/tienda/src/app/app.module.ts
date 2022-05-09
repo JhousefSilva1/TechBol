@@ -2,59 +2,57 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
 import { routing } from "./app.routing";
+import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { InicioComponent } from './components/inicio/inicio.component';
+import { NavComponent } from './components/nav/nav.component';
 import { NgbModule,NgbPaginationModule  } from "@ng-bootstrap/ng-bootstrap";
+
+//Translation
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
-//import { RatingModule } from 'ng-starrating';
-
-
-
-import { AppComponent } from './app.component';
-import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { InicioComponent } from './components/inicio/inicio.component';
-import { NotfoundComponent } from './components/notfound/notfound.component';
 import { LoginComponent } from './components/login/login.component';
-import { ContactoComponent } from './components/static/contacto/contacto.component';
+import { CuentaComponent } from './components/perfil/cuenta/cuenta.component';
+import { DireccionesComponent } from './components/perfil/direcciones/direcciones.component';
+import { DpedidosComponent } from './components/perfil/dpedidos/dpedidos.component';
+import { RatingModule } from 'ng-starrating';
 import { EmbajadorasComponent } from './components/static/embajadoras/embajadoras.component';
 import { ImpactoComponent } from './components/static/impacto/impacto.component';
 import { NosotrosComponent } from './components/static/nosotros/nosotros.component';
 import { PoliticasEnvioComponent } from './components/static/politicas-envio/politicas-envio.component';
 import { TerminosCondicionesComponent } from './components/static/terminos-condiciones/terminos-condiciones.component';
-import { CuentaComponent } from './components/perfil/cuenta/cuenta.component';
-import { DireccionesComponent } from './components/perfil/direcciones/direcciones.component';
-import { DpedidiosComponent } from './components/perfil/dpedidios/dpedidios.component';
-import { PedidiosComponent } from './components/perfil/pedidios/pedidios.component';
-import { DpedidosComponent } from './components/perfil/dpedidos/dpedidos.component';
-import { PedidosComponent } from './components/perfil/pedidos/pedidos.component';
-import { ReviewsComponent } from './components/perfil/reviews/reviews.component';
+import { ContactoComponent } from './components/static/contacto/contacto.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { IndexProductoComponent } from './components/productos/index-producto/index-producto.component';
+import { ShowProductoComponent } from './components/productos/show-producto/show-producto.component';
+import { EditProductoComponent } from './components/productos/edit-producto/edit-producto.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    InicioComponent,
     NavComponent,
     FooterComponent,
-    InicioComponent,
-    NotfoundComponent,
     LoginComponent,
-    ContactoComponent,
+    CuentaComponent,
+    DireccionesComponent,
+    DpedidosComponent,
     EmbajadorasComponent,
     ImpactoComponent,
     NosotrosComponent,
     PoliticasEnvioComponent,
     TerminosCondicionesComponent,
-    CuentaComponent,
-    DireccionesComponent,
-    DpedidiosComponent,
-    PedidiosComponent,
-    DpedidosComponent,
-    PedidosComponent,
-    ReviewsComponent
+    ContactoComponent,
+    NotfoundComponent,
+   
+    IndexProductoComponent,
+    ShowProductoComponent,
+    EditProductoComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +61,7 @@ import { ReviewsComponent } from './components/perfil/reviews/reviews.component'
     FormsModule,
     HttpClientModule,
     NgbPaginationModule,
-    //RatingModule,
+    RatingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

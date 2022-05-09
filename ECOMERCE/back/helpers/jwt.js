@@ -10,6 +10,7 @@ exports.createToken = function(user){
         nombres: user.nombres,
         apellidos: user.apellidos,
         email: user.email,
+        password: user.password,
         iat: moment().unix(),//inicio de token
         exp: moment().add(1,'day').unix()//tiempo de expiracion del token
     }

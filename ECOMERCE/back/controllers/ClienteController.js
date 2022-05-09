@@ -127,7 +127,7 @@ const login_cliente = async function(req,res){
                     token: jwt.createToken(user)
                 });
             }else{
-                res.status(200).send({message: 'La contraseña no coincide', data: undefined}); 
+                res.status(200).send({message: 'Las credenciales no coincide', data: undefined}); 
             }
         });
  

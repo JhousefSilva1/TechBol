@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GLOBAL } from 'src/app/services/GLOBA';
-import { GuestService } from 'src/app/services/guest.service';
+
+
 import { io } from "socket.io-client";
+import { GLOBAL } from '../../services/GLOBA';
+import { GuestService } from '../../services/guest.service';
 declare var $:any;
 declare var iziToast:any;
 declare function stickyHeader():any;

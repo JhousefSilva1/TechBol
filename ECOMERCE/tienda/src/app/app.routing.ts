@@ -3,7 +3,7 @@ import { ModuleWithProviders } from "@angular/core";
 import { AuthGuard } from "../app/guards/auth.guard";
 
 const appRoute : Routes = [
-    
+
 ]
    
 

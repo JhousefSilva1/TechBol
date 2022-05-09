@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { GuestService } from 'src/app/services/guest.service';
+import { GuestService } from '../../services/guest.service';
+
 
 @Component({
   selector: 'app-footer',

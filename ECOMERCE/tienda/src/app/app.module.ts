@@ -25,6 +25,13 @@ import { ImpactoComponent } from './components/static/impacto/impacto.component'
 import { NosotrosComponent } from './components/static/nosotros/nosotros.component';
 import { PoliticasEnvioComponent } from './components/static/politicas-envio/politicas-envio.component';
 import { TerminosCondicionesComponent } from './components/static/terminos-condiciones/terminos-condiciones.component';
+import { CuentaComponent } from './components/perfil/cuenta/cuenta.component';
+import { DireccionesComponent } from './components/perfil/direcciones/direcciones.component';
+import { DpedidiosComponent } from './components/perfil/dpedidios/dpedidios.component';
+import { PedidiosComponent } from './components/perfil/pedidios/pedidios.component';
+import { DpedidosComponent } from './components/perfil/dpedidos/dpedidos.component';
+import { PedidosComponent } from './components/perfil/pedidos/pedidos.component';
+import { ReviewsComponent } from './components/perfil/reviews/reviews.component';
 
 
 @NgModule({
@@ -40,7 +47,14 @@ import { TerminosCondicionesComponent } from './components/static/terminos-condi
     ImpactoComponent,
     NosotrosComponent,
     PoliticasEnvioComponent,
-    TerminosCondicionesComponent
+    TerminosCondicionesComponent,
+    CuentaComponent,
+    DireccionesComponent,
+    DpedidiosComponent,
+    PedidiosComponent,
+    DpedidosComponent,
+    PedidosComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,

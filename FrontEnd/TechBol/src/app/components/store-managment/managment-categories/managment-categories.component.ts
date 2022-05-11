@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 
 
@@ -12,26 +11,17 @@ import { CategoryService } from 'src/app/services/category.service';
 export class ManagmentCategoriesComponent implements OnInit {
 
   categories:any[]=[];
-  submitted=false;
-  loading=false;
-  id: string | null;
-  titulo = 'AGREGAR CATEGORIAS';
 
   constructor(private _categoryService: CategoryService,
-              private router: Router,
-              private toastr: ToastrService,
-              private aRoute: ActivatedRoute,
-              ){ 
-
-    this.id = this.aRoute.snapshot.paramMap.get('id');
-    console.log(this.id)
+              private router: Router,)
+              
+              { 
 
       
     }
 
   ngOnInit(): void {
     this.getCategories();
-    this.editCategories();
   }
 
   getCategories(){
@@ -52,27 +42,12 @@ export class ManagmentCategoriesComponent implements OnInit {
       console.log(this.categories)
     })
 
-
-    }
-    deleteCategories(id:string){
-      this._categoryService.deleteCategory(id).then(()=>{
-        console.log('Categoria Eliminada con éxito'),
-        this.toastr.info('La categoría ha sido eliminada con éxito','Categoria Eliminada',
-        {positionClass: 'toast-bottom-right'});
-
-      }).catch(error =>{
-        console.log(error);
-      });
   }
 
-  editCategories(){
-    this.titulo='EDITAR CAEGORIA'
-    if(this.id !==null){
-      this._categoryService.editCategory(this.id).subscribe(data =>{
-        console.log(data)
-      })
-    }
-  }
-    
+
+
+
+
+     
 
 }

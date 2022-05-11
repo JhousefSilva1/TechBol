@@ -1,0 +1,48 @@
+[
+    {
+        "titulo":"Moviles",
+        "slug":"Moviles",
+        "_id": "1000"
+    },
+    {
+        "titulo":"Laptops",
+        "slug":"Laptops",
+        "_id": "1001"
+    },
+    {
+        "titulo":"Música",
+        "slug":"Músic",
+        "_id": "1004"
+    },
+    {
+        "titulo":"Video",
+        "slug":"Video",
+        "_id": "1005"
+    },
+    {
+        "titulo":"Gadgets",
+        "slug":"Gadgets",
+        "_id": "1002"
+    },
+    {
+        "titulo":"Cine",
+        "slug":"Cine",
+        "_id": "1006"
+    },
+    {
+        "titulo":"Casa",
+        "slug":"Casa",
+        "_id": "1007"
+    },
+    {
+        "titulo":"Vehiculos",
+        "slug":"Vehiculos",
+        "_id": "1003"
+    },
+    {
+        "titulo":"Empresa",
+        "slug":"Empresa",
+        "_id": "1008"
+    }
+    
+]

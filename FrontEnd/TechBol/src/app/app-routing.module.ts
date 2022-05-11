@@ -25,7 +25,8 @@ const routes: Routes = [
   {path: '@', component: FooterComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'admin/Log-in',component: LogInAdminComponent},
-  {path: 'admin/Sign-up', component: SignUpAdminComponent},
+  {path: 'admin/Sign-up', component: SignUpAdminComponent},//crear admin
+  {path: 'admin/Sign-up-edit/:id', component: SignUpAdminComponent},//editar admin
   {path: 'customer',component:CustomerComponent},
   {path: 'customer/Log-In',component:LogInCustomerComponent},
   {path: 'customer/Sign-Up',component:SignUpCustomerComponent},
@@ -36,9 +37,10 @@ const routes: Routes = [
   {path: 'admin/managment-bills',component: ManagmentAdminsComponent},
   {path: 'admin/managment-sales', component: ManagmentSalesComponent},
   {path: 'admin/managment-stock', component: ManagmentStockComponent},
-  {path: 'admin/managment-products/create-product',component: CreateProductComponent},
-  {path: 'admin/managment-products/edit-product/:id',component: CreateProductComponent},
-  {path: 'admin/managment-categories/create-category', component: CreateCategoryComponent},
+  {path: 'admin/managment-products/create-product',component: CreateProductComponent},//create product
+  {path: 'admin/managment-products/edit-product/:id',component: CreateProductComponent},//edit category
+  {path: 'admin/managment-categories/create-category', component: CreateCategoryComponent},//crear category
+  {path: 'admin/managment-categories/edit-category/:id', component: CreateCategoryComponent}, //edit category
   {path: 'customer/Catalogue',component: CatalogueComponent},
 ];
 

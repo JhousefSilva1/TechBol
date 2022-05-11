@@ -11,7 +11,8 @@
           <h1 class="card-title"><b>Lista Usuarios Administradores</b></h1>
         </div>
   
-        <table class="table table-sm">
+        <h5 *ngIf="admins.length == 0">NO HAY DATOS PARA MOSTRAR</h5>
+        <table *ngIf="admins.length > 0" class="table table-striped mt-5">
      
           <thead>
             <tr>
@@ -47,11 +48,13 @@
 
           <td>
             <div>
-             <button class="btn btn-success" style="margin: 10px" type="btnEdit" >Editar</button>
-             <button  name="btnDelete" style="margin: 10px"  class="btn btn-danger"
-             mwlConfirmationPopover
+              <button [routerLink]="['/admin/Sign-up-edit/',admin.id]" class="btn btn-success" style="margin: 10px" type="btnEdit" >Editar</button>
+            
+              <button (click)="deleteAdmins(admin.id)" name="btnDelete" style="margin: 10px"  class="btn btn-danger"
+              mwlConfirmationPopover
 
              placement= "left"
+             
              
              >Eliminar</button>
   
